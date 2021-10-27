@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply p-2 rounded-md capitalize cursor-pointer;
+}
+
+.btn-blue{
+    @apply bg-blue-600 text-white
+}
+.btn:hover{
+    @apply bg-blue-300 
+}
+label{
+    @apply font-medium capitalize 
+}
+input{
+    @apply border-2 capitalize outline-none min-w-full
+}
+.input{
+    @apply flex flex-col
+}
+.flex-it{
+    @apply md:flex items-center justify-evenly gap-10
+}
+
+th,td{
+    @apply p-2 bottom-2 border-blue-300 text-center
+}
+td{
+    @apply border-2
+}
+th{
+    @apply bg-blue-600 text-white 
+}
+
+.container{
+     @apply max-w-4xl mx-auto my-4 capitalize p-5
+}
+
+span{
+    @apply font-bold mr-2
+}

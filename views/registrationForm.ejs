@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partial/head.ejs') %> 
+</head>
+<body>
+  <%- include('./partial/nav.ejs') %> 
+    <form action="/register" method="POST" class="p-5 max-w-5xl mx-auto ">
+      <h1 class="text-black uppercase mb-10 text-center text-4xl">vehicle register</h1>
+      <div class="flex-it">
+        <div class="w-full mb-3 input w-full">
+          <label for="vcOwner" class="form-label">vehicle owner</label>
+          <input type="text" name="vcOwner" id="vcOwner" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+
+        <div class="w-full mb-3 w-full">
+          <label for="driverLicenseNumber" class="form-label">driver license number</label>
+          <input type="text" name="driverLicenseNumber" id="driverLicenselass="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+        </div>
+
+        <div class="flex-it">
+        <div class="w-full mb-3">
+          <label for="placeOfIssue" class="form-label">place of issur</label>
+          <input type="text" name="placeOfIssue" id="placeOfIssue" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+
+        <div class="w-full mb-3">
+          <label for="state" class="form-label">state of registration</label>
+          <input type="text" name="state" id="state" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+</div>
+
+  <div class="flex-it">
+        <div class="w-full mb-3">
+          <label for="vcChasisNumber" class="form-label">vehicle chasis number</label>
+          <input type="text" name="vcChasisNumber" id="vcChasisNumber" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+
+        <div class="w-full mb-3">
+          <label for="engineNumber" class="form-label">engine number</label>
+          <input type="text" name="engineNumber" id="engineNumber" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+</div>
+
+  <div class="flex-it">
+        <div class="w-full mb-3">
+          <label for="vcType" class="form-label">vehicle type</label>
+          <input type="text" name="vcType" id="vcType" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+
+        <div class="w-full mb-3">
+          <label for="vcCapacity" class="form-label">vehicle capacity</label>
+          <input type="text" name="vcCapacity" id="vcCapacity" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+</div>
+        <div class="flex-it">
+        <div class="w-full mb-3">
+          <label for="address" class="form-label">address of vehicle owner</label>
+          <input type="text" name="address" id="address" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+
+        <div class="w-full mb-3">
+          <label for="email" class="form-label">email address of vehicle owner</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+</div>
+
+      <div class="flex-it">
+        <div class="w-full mb-3">
+          <label for="insurer" class="form-label">insurers name and policy number</label>
+          <input type="text" name="insurer" id="insurer" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+
+        <div class="w-full mb-3">
+          <label for="phoneNumber" class="form-label">phone number</label>
+          <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+</div>
+        <div class="w-full mb-3">
+          <label for="password" class="form-label">select password</label>
+          <input type="password" name="password" id="password" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted"></small>
+        </div>
+
+        <button class="btn btn-blue min-w-full">register</button>
+    </form>
+</body>
+</html>

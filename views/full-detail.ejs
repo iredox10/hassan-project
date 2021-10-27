@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../tailwind/style.css">
+        <title><%= title %> </title>
+    </head>
+<body>
+    <%- include('./partial/nav.ejs') %>
+</body>
+<h1 class="bg-green-500 text-white p-3 capitalize text-2xl font-bold"><%= user.vcOwner %> page </h1>
+    <div class="container">
+        <div class="detail md:flex items-center justify-between">
+        <div class="first-detail">
+            <p class="my-2"><span>vehicle owner: </span><%= user.vcOwner %> </p>
+            <p class="my-2"><span>driver license number: </span><%= user.driverLicense %> </p>
+            <p class="my-2"><span>place of issue: </span><%= user.placeIssue %> </p>
+            <p class="my-2"><span>state of registration: </span><%= user.state %> </p>
+            <p class="my-2"><span>vehicle chasis number: </span><%= user.vcChasisNumber %> </p>
+            <p class="my-2"><span>assingned plate number: </span><%= user.plateNumber%> </p>
+            <p class="my-2"><span>license expiraition: </span><%= user.licenseExpiration %></p>
+            </div>
+            <div class="second">       
+            <p class="my-2"><span>engine number: </span><%= user.engineNumber %> </p>
+            <p class="my-2"><span>vehicle type: </span><%= user.vcType %> </p>
+            <p class="my-2"><span>vehicle capacity: </span><%= user.vcCapacity %> </p>
+            <p class="my-2"><span>insurers name and policy number: </span><%= user.insurer %> </p>
+            <p class="my-2"><span>phone number: </span><%= user.phoneNumber %> </p>
+            <p class="my-2"><span>date/time register: </span><%= user.date %> </p>
+        </div>
+        </div>
+
+        <form action="/user/<%=user.id%>?_method=PATCH" method="POST">
+        <div class="assing md:flex items-center justify-between my-3">
+            <div class="plate">
+            <label for="plateNumber">assign plate number</label>
+            <input type="text" name="plateNumber" id="plateNumber" value="<%=user.plateNumber%>">
+            </div>
+            <div class="expiration">
+                <label for="expiration">license expiration date </label>
+                <input type="date" name="expiration">
+            </div>
+        </div>
+        <button class="btn btn-blue ">assign</button>
+        </form>
+    </div>
+
+</html>

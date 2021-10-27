@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partial/head.ejs') %> 
+<body>
+    <%- include('./partial/nav.ejs') %>
+    <div class="container">
+        <h1 class="text-3xl md:text-5xl text-center font-bold">admin page</h1>
+        <div class="table-container mt-5">
+        <% users.forEach(user =>{ %>
+            <table>
+            <tr>
+                <th>vechicle owner</th>
+                <th>driver licencse number</th>
+                <th>vehicle chasis number</th>
+                <th>vehicle type</th>
+                <th>phone number</th>
+                <th>view full detail</th>
+            </tr>
+            <tr>
+                <td><%= user.vcOwner %> </td>
+                <td><%= user.driverLicense %> </td>
+                <td><%= user.vcChasisNumber%> </td>
+                <td><%= user.vcType%> </td>
+                <td><%= user.phoneNumber%> </td>
+                <td><a href="/user-detail/<%= user.id %>" class="bg-green-400 p-2 text-white rounded-md hover:bg-green-700 ">full detail</a> </td>
+            </tr>
+        </table>
+        <%}) %>
+        </div>
+    </div>
+</body>
+</html>
